@@ -15,6 +15,7 @@ where CreateDate >= '${last_exec_time}' and CreateDate < '${current_exec_time}'
 
 ![1.PNG](images/1.PNG)
 ![2.PNG](images/2.PNG)
+
 ### 中间多次失败的情况：
 
 ![6.PNG](images/6.PNG)
@@ -30,6 +31,7 @@ where CreateDate >= '${last_exec_time}' and CreateDate < '${current_exec_time}'
 1. 需要考虑任务卡住（一直保持运行状态），需在任务配置中添加超时时间，防止任务卡住之后时间获取混乱。
 
 ![3.PNG](images/3.PNG)
+
 2. 执行策略建议选择：**串行抛弃**，避免多个调度同时执行。
 
 ![4.PNG](images/4.PNG)
